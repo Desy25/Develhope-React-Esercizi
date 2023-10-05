@@ -3,7 +3,8 @@ export function App() {
     function helloName(name) {
         return <h1>Hello, {name}</h1>
     }
-    return helloName();
+    const jsxExpression = <span>Jules</span>
+    return helloName(jsxExpression);
 }
 
-// Se non passo la variabile semplicemente mi ritornerà la stringa "Hello, ", perchè il parametro non è stato definito.
+// Se la variabile name contiene un'espressione JSX invece di una stringa, l'espressione JSX verrà trattata come il valore della variabile name e verrà incorporata all'interno del JSX restituito. In sostanza il risultato non cambia.
