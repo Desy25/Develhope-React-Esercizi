@@ -1,5 +1,7 @@
 
-export function App () {
-    const hello = <h1>Hello, World!</h1>
-    return hello
+export function App() {
+    function helloName(name) {
+        return <h1>Hello, {name}</h1>
+    }
+    return helloName("Jules");
 }
