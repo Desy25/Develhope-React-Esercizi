@@ -1,8 +1,8 @@
 import { Age } from "./Age";
 
-export function Welcome({ name }) {
+export function Welcome({ name, welcomeAge }) {
     return <div>
         <p>Welcome, {name}!</p>
-        <Age age={0} />
+        {welcomeAge > 18 && <Age age={welcomeAge} />}
     </div>
 }
