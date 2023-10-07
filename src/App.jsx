@@ -3,6 +3,6 @@ import { Welcome } from "./Welcome";
 
 export function App() {
     return <div>
-       <Welcome name="Violante" welcomeAge= {21} />
+       <Welcome name="Violante" />
     </div>
 }
