@@ -9,6 +9,6 @@ export function App() {
     // }
     return <div>
        {/* <Welcome name="Violante" /> */}
-       <Counter incrementAmount={2} />
+       <Counter amount={2} />
     </div>
 } 
