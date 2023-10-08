@@ -8,3 +8,5 @@ export function App() {
        <AlertClock />
     </div>
 }
+
+// Avevo già passato il componente AlertClock all'interno di App nell'esercizio precedente. 
