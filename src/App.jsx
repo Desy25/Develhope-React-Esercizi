@@ -1,6 +1,7 @@
 
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
+import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -12,5 +13,6 @@ export function App() {
        {/* <Welcome name="Violante" /> */}
        <Counter amount={2} />
        <Clock />
+       <MouseClicker />
     </div>
 } 
