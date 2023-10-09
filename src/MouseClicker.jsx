@@ -4,8 +4,8 @@ export function MouseClicker() {
     }
     function handleEvent(event) {
         console.log(event.currentTarget.src);
+        event.stopPropagation();
     }
     return <button name="one" onClick={handleButton}><img src="Button-Image" height={20} width={20} onClick={handleEvent} />Click here</button>
 }
-
-//Quando il "click" verrà eseguito sul tag img verranno comunque entrambi visualizzati in console per via dell'effetto "bubble" di html perchè img si trova all'interno del button.
+// Per evitare che l'attributo name del pulsante venga stampato nella console quando si fa clic sull'immagine, è possibile fermare la propagazione dell'evento chiamando il metodo stopPropagation dell'oggetto event all'interno della funzione handleEvent.
