@@ -13,7 +13,7 @@ export function App() {
     return (
         <div>
             {/* <UncontrolledLogin /> */}
-            <FocusableInput />
+            <Counter />
         </div>
     )
 }
