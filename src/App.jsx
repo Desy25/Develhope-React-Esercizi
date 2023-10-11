@@ -14,7 +14,28 @@ export function App() {
     return (
         <div>
             {/* <UncontrolledLogin /> */}
-            <Colors items={["Green","Yellow","Blue","Purple","Pink"]} />
+            <Colors items={[
+                {
+                    id : 1 , 
+                    name : "Green"
+                },
+                {
+                    id : 2 , 
+                    name : "Yellow"
+                },
+                {
+                    id : 3 , 
+                    name : "Blue"
+                },
+                {
+                    id : 4 , 
+                    name : "Purple"
+                },
+                {
+                    id : 5 , 
+                    name : "Pink"
+                }
+                ]} />
         </div>
     )
 }
