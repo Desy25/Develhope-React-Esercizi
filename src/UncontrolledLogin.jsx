@@ -25,6 +25,12 @@ export function UncontrolledLogin() {
             session
         }
 
+
+        // L'API standard per accedere ai dati dei moduli è la DOM API , nello specifico utilizzando l'oggetto FormData.
+        // Ma esistono anche approcci non standard e meno utilizzati, come l'accesso diretto agli elementi del modulo tramite il loro attributo name.
+
+
+
         console.log(data);
     }
     return (
