@@ -7,16 +7,19 @@ import { MultiButton } from "./MultiButton";
 import { Welcome } from "./Welcome";
 
 export function App() {
-    // function handleShowTime() {
-    //     const date = new Date();
-    //     alert(`The current time is ${date.toLocaleTimeString()}`)
-    // }
-    return <div>
-       {/* <Welcome name="Violante" /> */}
-       {/* <Counter amount={2} />
-       <Clock />
-       <MultiButton /> */}
-       {/* <InteractiveWelcome /> */}
-       <Login />
-    </div>
-} 
+    function handleLogin(data) {
+        const { username, password, remember } = data;
+
+        if (username && password) {
+            if (remember) {
+                localStorage.setItem("loggedInUser", username);
+            }
+            console.log("Login successful!");
+        }
+    }
+    return (
+        <div>
+            <Login onLogin={handleLogin} />
+        </div>
+    )
+}

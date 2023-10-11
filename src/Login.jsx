@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Login() {
+export function Login({onLogin}) {
     const [data, setData] = useState({
         username: "",
         password: "",
@@ -15,15 +15,21 @@ export function Login() {
         setData((d) => {
             return {
                 ...d,
-                [name]: type === "checkbox" ? checked : value 
+                [name]: type === "checkbox" ? checked : value
             }
         })
     }
+
+    function handleLogin() {
+        onLogin(data);
+      }
+
     return (
         <div>
             <input type="text" name="username" value={data.username} onChange={handleInput} />
             <input type="password" name="password" value={data.password} onChange={handleInput} />
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInput} />
+            <button disabled={!data.username || !data.password} onClick={handleLogin} >Login</button>
 
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
