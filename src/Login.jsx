@@ -32,15 +32,23 @@ export function Login({onLogin}) {
         });
       }
 
+      function handleSubmit(event) {
+        event.preventDefault();
+        handleLogin();
+      }
+    
+
     return (
-        <div>
+      <form onSubmit={handleSubmit}>
+          <div>
             <input type="text" name="username" value={data.username} onChange={handleInput} />
             <input type="password" name="password" value={data.password} onChange={handleInput} />
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInput} />
-            <button disabled={!data.username || !data.password} onClick={handleLogin} >Login</button>
+            <button disabled={!data.username || !data.password} type="submit" >Login</button>
             <button onClick={handleReset}>Reset</button>
 
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
+      </form>
     )
 }
