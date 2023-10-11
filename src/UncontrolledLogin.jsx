@@ -25,10 +25,11 @@ export function UncontrolledLogin() {
             session
         }
 
-
-        // L'API standard per accedere ai dati dei moduli è la DOM API , nello specifico utilizzando l'oggetto FormData.
-        // Ma esistono anche approcci non standard e meno utilizzati, come l'accesso diretto agli elementi del modulo tramite il loro attributo name.
-
+        // L'API FormData semplifica il processo di raccolta dei dati dai campi del modulo. 
+        // Include automaticamente tutti i controlli del modulo, compresi input di tipo testo, input di tipo password, checkbox ecc,
+        // senza la necessità di specificarli manualmente. E' più semplice da utilizzare e si risparmia tempo.
+        // L'API FormData è ben supportata nei browser moderni, ma alcuni browser più vecchi potrebbero non supportarla completamente.
+        // Inoltre non è adatta a dati che non sono associati a moduli HTML. 
 
 
         console.log(data);
