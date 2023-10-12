@@ -3,6 +3,6 @@ import { Message } from "./Message";
 export function Hello() {
     return <div>
         <h2>Hello, World!</h2>
-        <Message />
+        <p>What a beautiful day!</p>
     </div>
 }
