@@ -7,6 +7,7 @@ export function TodoList() {
     function addItem() {
         setItems([...items, value]);
         setValue('');
+        //Lo avevo già fatto nell'esercizio precedente.
     }
 
     function handleInputChange(event) {
@@ -20,7 +21,7 @@ export function TodoList() {
                 <li key={index}>{item}</li>
             ))}</ul>
             <input type="text" value={value} onChange={handleInputChange} />
-            <button onClick={addItem}>Add item</button>
+            <button onClick={addItem} type="reset">Add item</button>
         </div>
     )
 }
