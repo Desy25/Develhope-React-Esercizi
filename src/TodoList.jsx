@@ -17,11 +17,17 @@ export function TodoList() {
         setItems([]);
     }
 
+    function removeItem(index) {
+        const newItems = items.filter((_, i) => i !== index);
+        setItems(newItems);
+      };
+      
+
     return (
         <div>
             <h2>ToDo List :</h2>
             <ul>{items.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index}>{item}<button onClick={() => removeItem(index)}>Remove</button></li>
             ))}</ul>
             <input type="text" value={value} onChange={handleInputChange} />
             <button onClick={addItem} type="reset">Add item</button>
