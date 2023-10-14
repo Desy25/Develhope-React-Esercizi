@@ -2,8 +2,8 @@ import { useState } from "react"
 
 export function Login({onLogin}) {
     const [data, setData] = useState({
-        username: "",
-        password: "",
+        username: "username",
+        password: "password",
         remember: false
     })
 
@@ -44,7 +44,9 @@ export function Login({onLogin}) {
             <input type="text" name="username" value={data.username} onChange={handleInput} />
             <input type="password" name="password" value={data.password} onChange={handleInput} />
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInput} />
-            <button disabled={!data.username || !data.password} type="submit" >Login</button>
+            <button disabled={!data.username || !data.password} type="submit" style={{
+              backgroundColor: data.password.length < 8 ? "red" : "green"
+            }} >Login</button>
             <button onClick={handleReset}>Reset</button>
 
             <pre>{JSON.stringify(data, null, 2)}</pre>
