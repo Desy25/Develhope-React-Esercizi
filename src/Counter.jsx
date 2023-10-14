@@ -31,7 +31,7 @@ export function Counter({ initialValue = 0, amount = 1 }) {
     }
 
 
-    return <div>
+    return <div style={{ backgroundColor: "aquamarine", color: "purple", border:"2px solid blue", paddingLeft: "1rem"}}>
         <CounterDisplay displayCounter={counter} />
         <button onClick={incrementCounter}>Increment by {amount}</button>
         <button onClick={decrementCounter}>Decrement by {amount}</button>

@@ -15,7 +15,7 @@ export function App() {
     return (
         <div>
             {/* <UncontrolledLogin /> */}
-           <Welcome />
+           <Counter />
         </div>
     )
 }
