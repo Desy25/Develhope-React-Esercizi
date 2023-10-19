@@ -3,6 +3,7 @@ import { LanguageContext } from "./LanguageContext";
 
 
 export function Clock() {
+    // Avevo già fatto precedentemente la parte dello useContext
     const language = useContext(LanguageContext);
 
     const [date, setDate] = useState(new Date())
