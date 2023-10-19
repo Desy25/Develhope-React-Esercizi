@@ -14,7 +14,7 @@ import { Welcome } from "./Welcome";
 export function App() {
  
     return (
-        <Container >
+        <Container title="Title">
             {/* <UncontrolledLogin /> */}
            <Login />
         </Container>
