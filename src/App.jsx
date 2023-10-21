@@ -7,21 +7,26 @@ import { Counter } from "./Counter";
 import { FocusableInput } from "./FocusableInput";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { LanguageContext } from "./LanguageContext";
-import { Login } from "./Login";
 import { MultiButton } from "./MultiButton";
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
+import { Login } from "./Login";
 
 export function App() {
-    // const [language, setLanguage] = useState('en');
+    function handleLogin(data) {
+        const { username, password, remember } = data;
 
-    // function handleLanguage(event) {
-    //     setLanguage(event.target.value);
-    // }
-
+        if (username && password) {
+            if (remember) {
+                localStorage.setItem("loggedInUser", username);
+            }
+            console.log("Login successful!");
+            console.log(`username: ${username} password: ${password}`)
+        }
+    }
     return (
       <div>
         {/* <select onChange={handleLanguage} value={language}>
@@ -35,7 +40,7 @@ export function App() {
         </Container> */}
         {/* <GithubUser username="Desy25"/> */}
         {/* <GithubUsers/> */}
-        <Counter />
+        <Login onLogin={handleLogin}/>
       </div>
     )
 }
