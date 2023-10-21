@@ -13,6 +13,7 @@ import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
+import { GithubUsers } from "./GithubUsers";
 
 export function App() {
     // const [language, setLanguage] = useState('en');
@@ -32,7 +33,8 @@ export function App() {
                 <Clock />
             </LanguageContext.Provider>
         </Container> */}
-        <GithubUser username="Desy25"/>
+        {/* <GithubUser username="Desy25"/> */}
+        <GithubUsers/>
       </div>
     )
 }
