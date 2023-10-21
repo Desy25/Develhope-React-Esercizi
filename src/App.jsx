@@ -12,17 +12,18 @@ import { MultiButton } from "./MultiButton";
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
+import { GithubUser } from "./GithubUser";
 
 export function App() {
-    const [language, setLanguage] = useState('en');
+    // const [language, setLanguage] = useState('en');
 
-    function handleLanguage(event) {
-        setLanguage(event.target.value);
-    }
+    // function handleLanguage(event) {
+    //     setLanguage(event.target.value);
+    // }
 
     return (
       <div>
-        <select onChange={handleLanguage} value={language}>
+        {/* <select onChange={handleLanguage} value={language}>
             <option value="en">EN</option>
             <option value="it">IT</option>
         </select>
@@ -30,7 +31,8 @@ export function App() {
             <LanguageContext.Provider value={language}>
                 <Clock />
             </LanguageContext.Provider>
-        </Container>
+        </Container> */}
+        <GithubUser username="Desy25"/>
       </div>
     )
 }
