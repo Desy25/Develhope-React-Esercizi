@@ -34,7 +34,8 @@ export function App() {
             </LanguageContext.Provider>
         </Container> */}
         {/* <GithubUser username="Desy25"/> */}
-        <GithubUsers/>
+        {/* <GithubUsers/> */}
+        <Counter />
       </div>
     )
 }
