@@ -14,6 +14,7 @@ import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
 import { Login } from "./Login";
+import { CurrentLocation } from "./CurrentLocation";
 
 export function App() {
     function handleLogin(data) {
@@ -39,7 +40,7 @@ export function App() {
             </LanguageContext.Provider>
         </Container> */}
         {/* <GithubUser username="Desy25"/> */}
-        <GithubUsers/>
+        <CurrentLocation />
         {/* <Login onLogin={handleLogin}/> */}
       </div>
     )
