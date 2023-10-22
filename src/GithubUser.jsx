@@ -2,18 +2,27 @@ import React from "react";
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({ username }) {
-    const data = useGithubUser(username);
+    const {data, error, loading} = useGithubUser(username);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error.message}</div>;
+    }
 
     if (!data) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     return (
         <div>
             <h1>GitHub Data:</h1>
-            <p>Name: {data.name}</p>
-            <p>Login: {data.login}</p>
-            <img src={data.avatar_url} alt="" />
+            {!loading && <p>Name: {data.name}</p>}
+            {!loading && <p>Login: {data.login}</p>}
+            {!loading && <img src={data.avatar_url} alt="" />}
+            {error && <p>Error fetching data</p>}
         </div>
     );
 }
