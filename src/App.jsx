@@ -15,6 +15,7 @@ import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
 import { Login } from "./Login";
 import { CurrentLocation } from "./CurrentLocation";
+import { FilteredList } from "./FilteredList";
 
 export function App() {
     function handleLogin(data) {
@@ -42,7 +43,16 @@ export function App() {
         {/* <GithubUser username="Desy25"/> */}
         {/* <CurrentLocation /> */}
         {/* <Login onLogin={handleLogin}/> */}
-        <Counter />
+        {/* <Counter /> */}
+        <FilteredList list={
+            [
+                { id: 1, name: "Alice", age: 20 },
+                { id: 2, name: "Bob", age: 25 },
+                { id: 3, name: "Charlie", age: 18 },
+                { id: 4, name: "Diana", age: 30 },
+                { id: 5, name: "Franco", age: 17 }
+              ]
+        } />
       </div>
     )
 }
