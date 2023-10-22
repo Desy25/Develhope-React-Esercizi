@@ -40,8 +40,9 @@ export function App() {
             </LanguageContext.Provider>
         </Container> */}
         {/* <GithubUser username="Desy25"/> */}
-        <CurrentLocation />
+        {/* <CurrentLocation /> */}
         {/* <Login onLogin={handleLogin}/> */}
+        <Counter />
       </div>
     )
 }
