@@ -17,6 +17,7 @@ import { Login } from "./Login";
 import { CurrentLocation } from "./CurrentLocation";
 import { FilteredList } from "./FilteredList";
 import { Route, Routes } from "react-router-dom";
+import { ShowGithubUser } from "./ ShowGithubUser";
 
 export function App() {
     // function handleLogin(data) {
@@ -35,6 +36,7 @@ export function App() {
        <Routes>
         <Route path="/" element={<Welcome name="Nora"/>} />
         <Route path="counter" element={<Counter/>} />
+        <Route path="users/:username" element={<ShowGithubUser/>} />
        </Routes>
       </div>
     )
