@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GithubUser } from './GithubUser';
+import { Link, Outlet } from 'react-router-dom';
 
 export function GithubUsers() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,12 +21,19 @@ export function GithubUsers() {
   return (
     <div>
       <form onSubmit={handleSearch}>
-        <input type="text"value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+        <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         <button type="submit">Search</button>
       </form>
       <div>
-        {users.map((user, index) => <GithubUser key={index} username={user.login} />)}
+        <ul>
+          {users.map((user) => (
+            <li key={user.login}>
+              <Link to={`/users/${user.login}`}>{user.login}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
+      <Outlet />
     </div>
   );
 }
