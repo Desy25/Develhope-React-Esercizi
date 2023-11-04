@@ -34,6 +34,7 @@ export function App() {
       <div>
        <Routes>
         <Route path="/" element={<Welcome name="Nora"/>} />
+        <Route path="counter" element={<Counter/>} />
        </Routes>
       </div>
     )
