@@ -16,7 +16,7 @@ import { GithubUsers } from "./GithubUsers";
 import { Login } from "./Login";
 import { CurrentLocation } from "./CurrentLocation";
 import { FilteredList } from "./FilteredList";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ ShowGithubUser";
 
 export function App() {
@@ -38,6 +38,7 @@ export function App() {
         <Route path="counter" element={<Counter/>} />
         <Route path="users/:username" element={<ShowGithubUser/>} />
        </Routes>
+       <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="users/Desy25">Desy's Github</Link>
       </div>
     )
 }
