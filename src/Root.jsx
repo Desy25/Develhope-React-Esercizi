@@ -10,6 +10,8 @@ async function fetcher(url) {
     return response.json();
   };
 
+//   Lo avevo impostato già dal primo esercizio.
+
 export function Root() {
     return (
         <SWRConfig value={{ fetcher }}>
