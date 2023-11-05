@@ -2,7 +2,7 @@ import React from "react";
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({ username }) {
-    const {data, error, loading} = useGithubUser(username);
+    const {data, error, loading, fetchData} = useGithubUser(username);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -19,6 +19,7 @@ export function GithubUser({ username }) {
     return (
         <div>
             <h1>GitHub Data:</h1>
+            <button onClick={fetchData}>Refresh Data</button>
             {!loading && <p>Name: {data.name}</p>}
             {!loading && <p>Login: {data.login}</p>}
             {!loading && <img src={data.avatar_url} alt="" />}

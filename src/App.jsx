@@ -42,7 +42,7 @@ export function App() {
                 </Route>
                 <Route path="*" element={<h3>Not Found</h3>} />
             </Routes>
-            <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="users/Desy25">Desy's Github</Link>
+            <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="users/Desy25">Desy's Github</Link> | <Link to="users">Github users</Link>
         </div>
     )
 }
